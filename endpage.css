@@ -27,7 +27,7 @@
 
 .popup {
   width: 400px;
-  background-color: #ff7300;
+  background-color: #fff;
   border-radius: 6px;
   position: absolute;
   top: 0;
@@ -79,7 +79,7 @@
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   color: ;
-  border: 0.5rem solid #ff5722;
+  border: 0.5rem solid #fff;
   border-radius: 5rem;
   cursor: pointer;
   background: none;
