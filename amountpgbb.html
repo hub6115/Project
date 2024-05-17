@@ -1,17 +1,1 @@
-<p>The price of the car is: <span id="carPrice">5000</span></p>
-<p>Enter the number of hours: <input type="number" id="hours" /></p>
-<p>The total amount is: ₹ <span id="totalAmount"></span></p>
 
-<script>
-  const carPrice = 5000;
-  const hoursInput = document.getElementById("hours");
-  const totalAmountSpan = document.getElementById("totalAmount");
-
-  hoursInput.addEventListener("input", calculateTotalAmount);
-
-  function calculateTotalAmount() {
-    const hours = parseInt(hoursInput.value);
-    const totalAmount = carPrice * hours;
-    totalAmountSpan.textContent = totalAmount;
-  }
-</script>
