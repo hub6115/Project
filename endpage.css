@@ -72,3 +72,23 @@
   top: 50%;
   transform: translate(-50%,-50%) scale(1);
 }
+.btnn {
+  margin-top: 1rem;
+
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  color: #ff5722;
+  border: 0.5rem solid #ff5722;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+  transition: 0.5s;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnn:hover {
+  background: #ff5722;
+  color: white;
+}
