@@ -2,27 +2,30 @@
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;/*box-sizing property determines how an element's total width and height are calculated*/
   outline: none;
   border: none;
-  text-decoration: none;
-  text-transform: capitalize;
+  text-decoration: none;/*The text-decoration property specifies the decoration added to text*/
+  text-transform: capitalize;/*The text-transform property controls the capitalization of text.*/
   transition: 0.5s;
 }
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow-x: hidden;/*The overflow property specifies whether to clip the content or to add scrollbars 
+  when the content of an element is too big to fit in the specified area. */
+
+  scroll-behavior: smooth;/*The scroll-behavior property specifies whether to smoothly animate the scroll 
+  position, instead of a straight jump, when the user clicks on a link within a scrollable box.*/
   scroll-padding-top: 9rem;
 }
-
+/*The term 'webkit' is used in the CSS syntax for rendering content in Safari and Chrome browsers*/
 html::-webkit-scrollbar {
   width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
-  background: #111;
+  background: #ffffff;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -31,8 +34,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: #111;
-  /* overflow-x: hidden; */
+  background: #ffffff;
+
 }
 
 section {
@@ -62,15 +65,15 @@ section {
   color: #ff5722;
   border: 0.5rem solid #ff5722;
   border-radius: 5rem;
-  cursor: pointer;
+  cursor: pointer;/*The cursor property specifies the mouse cursor to be displayed when pointing over an element*/
   background: none;
   transition: 0.5s;
-  font-weight: bold;
+  font-weight: bold;/*The font-weight property sets how thick or thin characters in text should be displayed*/
 }
 
 .btn:hover {
   background: #ff5722;
-  color: #111;
+  color: #ffffff;
 }
 
 .header {
@@ -78,13 +81,14 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  background: #222;
+  z-index: 1000;/*z-index is the CSS property that controls the stacking order of overlapping elements on a page.*/
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;/* The justify-content property aligns the flexible container's items 
+  when the items do not use all available space on the main-axis (horizontally)*/
   padding: 1.5rem 9%;
 }
 
@@ -102,18 +106,18 @@ section {
 .header .btn {
   margin-top: 0;
 }
-.logo{
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  width: 8vw;
-}
-.cw{
+
+.logo {
+  font-size: 2.5rem;
   color: #fff;
-  align-items: center;
-  display: flex;
-  font-size: 20px;
+  font-weight: bolder;
 }
+
+.logo i {
+  color: #ff5722;
+  padding-right: 0.5rem;
+}
+
 #menu-btn {
   font-size: 2.5rem;
   color: #fff;
@@ -126,8 +130,8 @@ section {
   margin-top: 9rem;
   width: 100%;
   border-radius: 1rem;
-  background: linear-gradient(rgba(68, 68, 68, 0.7), rgba(17, 17, 17, 0.7)),
-    url(bg-img.jpg) no-repeat;
+  background: linear-gradient(rgb(100 100 100 / 70%), rgba(17, 17, 17, 0.7)),
+    url(../images/home-bgg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -142,10 +146,9 @@ section {
 }
 
 .home .content span {
-  font-size: small;
   font-weight: bolder;
   color: #ff5722;
-  -webkit-text-stroke: 0.2rem #fff;
+  -webkit-text-stroke: 0.3rem #fff;
   font-size: 6vw;
   display: block;
 }
@@ -156,7 +159,7 @@ section {
 }
 
 .home .content p {
-  max-width: 60rem;
+  max-width: 60rem;/*The max-width CSS property sets the maximum width of an element*/
   margin: 1rem auto;
   font-size: 1.4rem;
   color: #aaa;
@@ -168,11 +171,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
+  -ms-flex-align: center;/*The flex CSS shorthand property sets how a 
+  flex item will grow or shrink to fit the space available in its flex container*/
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2rem;/*The gap property defines the size of the gap between the 
+  rows and between the columns in flexbox, grid or multi-column layout.*/
   margin-top: 5rem;
 }
 
@@ -189,7 +194,8 @@ section {
 
 .about .content {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 42rem;
+  -ms-flex: 1 1 42rem;/*specify how a -moz-box or -webkit-box grows to 
+  fill the box that contains it, in the direction of the containing box's layout.*/
   flex: 1 1 42rem;
   margin-bottom: 5rem;
 }
@@ -213,7 +219,8 @@ section {
 }
 .popular .box-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;/*The CSS flex-wrap property is used to specify 
+  whether flex items are forced into a single line or wrapped onto multiple lines.*/
   gap: 1.5rem;
 }
 
@@ -259,7 +266,8 @@ section {
 }
 .destination .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));/*grid-template-columns defines the 
+  number and size of columns in a grid container*/
   gap: 1.5rem;
 }
 
@@ -371,57 +379,10 @@ section {
   color: #eee;
   padding: 1rem 0;
 }
-.us span {
-  color: #ff5722;
-  font-size: 6rem;
-}
-.us .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.us .box-container .box {
-  text-align: center;
-  padding: 2rem;
-  border: 1rem solid #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  flex: 1 1 30rem;
-  background: #111;
-  margin-top: 6rem;
-}
-
-.us .box-container .box img {
-  height: 12rem;
-  width: 12rem;
-  border-radius: 50%;
-  border: 1rem solid #fff;
-  margin-top: -8rem;
-  object-fit: cover;
-}
-
-.us .box-container .box h4 {
-  font-size: 2.5rem;
-  color: #fff;
-  padding: 0.5rem 0;
-}
-
-.us .box-container .box .stars i {
-  font-size: 2rem;
-  color: #ff5722;
-  padding: 0.5rem 0;
-}
-
-.us .box-container .box p {
-  font-size: 1.5rem;
-  color: #eee;
-  padding: 1rem 0;
-}
 
 .banner {
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url(p-6.jpeg) no-repeat;
+    url(../images/banner-bgg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 3rem 2rem;
@@ -448,7 +409,9 @@ section {
 .footer .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];/*The grid-column CSS shorthand property specifies a
+   grid item's size and location within a grid column 
+  by contributing a line, a span, or nothing (automatic) to its grid placement*/
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
@@ -601,9 +564,4 @@ section {
     font-size: 2.7rem;
   }
 }
-.logo2{
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+/*# sourceMappingURL=style.css.map */
