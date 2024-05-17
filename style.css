@@ -2,30 +2,27 @@
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;/*box-sizing property determines how an element's total width and height are calculated*/
+  box-sizing: border-box;
   outline: none;
   border: none;
-  text-decoration: none;/*The text-decoration property specifies the decoration added to text*/
-  text-transform: capitalize;/*The text-transform property controls the capitalization of text.*/
+  text-decoration: none;
+  text-transform: capitalize;
   transition: 0.5s;
 }
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;/*The overflow property specifies whether to clip the content or to add scrollbars 
-  when the content of an element is too big to fit in the specified area. */
-
-  scroll-behavior: smooth;/*The scroll-behavior property specifies whether to smoothly animate the scroll 
-  position, instead of a straight jump, when the user clicks on a link within a scrollable box.*/
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   scroll-padding-top: 9rem;
 }
-/*The term 'webkit' is used in the CSS syntax for rendering content in Safari and Chrome browsers*/
+
 html::-webkit-scrollbar {
   width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #111;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -34,8 +31,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: #ffffff;
-
+  background: #111;
+  /* overflow-x: hidden; */
 }
 
 section {
@@ -65,15 +62,15 @@ section {
   color: #ff5722;
   border: 0.5rem solid #ff5722;
   border-radius: 5rem;
-  cursor: pointer;/*The cursor property specifies the mouse cursor to be displayed when pointing over an element*/
+  cursor: pointer;
   background: none;
   transition: 0.5s;
-  font-weight: bold;/*The font-weight property sets how thick or thin characters in text should be displayed*/
+  font-weight: bold;
 }
 
 .btn:hover {
   background: #ff5722;
-  color: #ffffff;
+  color: #111;
 }
 
 .header {
@@ -81,14 +78,13 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;/*z-index is the CSS property that controls the stacking order of overlapping elements on a page.*/
-  background: #ffffff;
+  z-index: 1000;
+  background: #222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  justify-content: space-between;/* The justify-content property aligns the flexible container's items 
-  when the items do not use all available space on the main-axis (horizontally)*/
+  justify-content: space-between;
   padding: 1.5rem 9%;
 }
 
@@ -159,7 +155,7 @@ section {
 }
 
 .home .content p {
-  max-width: 60rem;/*The max-width CSS property sets the maximum width of an element*/
+  max-width: 60rem;
   margin: 1rem auto;
   font-size: 1.4rem;
   color: #aaa;
@@ -171,13 +167,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;/*The flex CSS shorthand property sets how a 
-  flex item will grow or shrink to fit the space available in its flex container*/
+  -ms-flex-align: center;
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 2rem;/*The gap property defines the size of the gap between the 
-  rows and between the columns in flexbox, grid or multi-column layout.*/
+  gap: 2rem;
   margin-top: 5rem;
 }
 
@@ -194,8 +188,7 @@ section {
 
 .about .content {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 42rem;/*specify how a -moz-box or -webkit-box grows to 
-  fill the box that contains it, in the direction of the containing box's layout.*/
+  -ms-flex: 1 1 42rem;
   flex: 1 1 42rem;
   margin-bottom: 5rem;
 }
@@ -219,8 +212,7 @@ section {
 }
 .popular .box-container {
   display: flex;
-  flex-wrap: wrap;/*The CSS flex-wrap property is used to specify 
-  whether flex items are forced into a single line or wrapped onto multiple lines.*/
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -266,8 +258,7 @@ section {
 }
 .destination .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));/*grid-template-columns defines the 
-  number and size of columns in a grid container*/
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   gap: 1.5rem;
 }
 
@@ -409,9 +400,7 @@ section {
 .footer .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];/*The grid-column CSS shorthand property specifies a
-   grid item's size and location within a grid column 
-  by contributing a line, a span, or nothing (automatic) to its grid placement*/
+  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
